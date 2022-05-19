@@ -1,0 +1,23 @@
+h1, h2 {
+    color: white;
+    background-color: black;
+    margin-bottom: 30px;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    align-content: left;
+    margin-bottom: 30px;
+}
+
+img {
+    margin-bottom: 30px;
+    width: 900px;
+    height: 600px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
