@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header, .footer {
+    display: flex;
+    background-color: red;
+    color: white;
+    width: 1440px;
+    height: 60px;
+    padding: 20px;
+}
+
+.tart {
+    display: flex;
+    width: 400px;
+    height: 800px;
+    padding: 20px;
+    align-items: center;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.dish {
+    width: 400px;
+    height: 600px;
+    font-size: 15px;
+    border: 5px solid #E5E000;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.all-project {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
