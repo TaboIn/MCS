@@ -9,7 +9,6 @@
     display: flex;
     background-color: red;
     color: white;
-    width: 1440px;
     height: 60px;
     padding: 20px;
 }
@@ -28,7 +27,6 @@ p {
 
 .dish {
     width: 400px;
-    height: 600px;
     font-size: 15px;
     border: 5px solid #E5E000;
     border-radius: 30px;
@@ -38,5 +36,5 @@ p {
 .all-project {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
 }
