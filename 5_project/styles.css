@@ -54,9 +54,14 @@ a:visited {
     color: red;
 }
 
+.test-cont {
+    display: flex;
+    justify-content: center;
+    
+}
+
 .container {
-    width: 100%;
-    padding: 50px;
+    width: 1024px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,8 +80,7 @@ a:visited {
     margin-bottom: 100px;
     
     display: flex;
-    position: relative;
-    left: 400px;
+    justify-content: center;
 }
 
 .buttles {
