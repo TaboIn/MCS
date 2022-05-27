@@ -55,34 +55,36 @@ a:visited {
 }
 
 .container {
-    width: 1040px;
+    width: 100%;
     padding: 50px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-content: center;
 }
 
 .border {
-    width: 700px;
+    width: 1024px;
     font-size: 15px;
     border: 5px solid #F8BFC7;
     border-radius: 30px;
-    padding: 30px;
+    
+    padding: 50px;
+    
+    margin-top: 80px; 
     margin-bottom: 100px;
-
+    
     display: flex;
-    justify-content: space-between;
     position: relative;
-    top: 30px;
-    left: 350px;
+    left: 400px;
 }
 
 .buttles {
     height: 900px;
     padding: 20px;
-    
     display: flex;
     justify-content: space-around;
+    
 }
 
 .buttle-1 {
@@ -105,17 +107,24 @@ a:visited {
     height: 863px;
 }
 
+.descriptions {
+    display: flex;
+    justify-content: space-around;
+}
+
 .buttle {
     background: url('images/glass.png');
     display: flex;
+    margin-right:  150px;
     width: 100px;
     height: 220px;
 }
 
 .text li {
     font-size: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
+
 
 .footer {
     display: flex;
