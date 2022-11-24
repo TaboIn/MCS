@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import { render } from 'react-dom'
-import mapboxgl from 'mapbox-gl'
-import './index.css'
+import React, { useState, useEffect } from 'react';
+import { render } from 'react-dom';
+import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js'
+import './index.css';
+
 
 function App() {
 	const [random, setRandom] = useState(Math.random())
