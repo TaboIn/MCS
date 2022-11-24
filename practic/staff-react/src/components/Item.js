@@ -24,7 +24,7 @@ export default function Item(props) {
 			<div className='rounded-t-lg border-2 border-sky-900 h-[200px] w-[160px] bg-slate-200 hover:bg-slate-300 '>
 				<div className='item-info '>
 					<h2 className='font-bold text-lg p-2 break-words'>{info.name}</h2>
-					<p className='font-bold text-lg p-2 break-words'>{info.desc}</p>
+					<p className='text-lg p-2 break-words'>{info.desc}</p>
 				</div>
 				<div className='item-quantity py-4 flex justify-center items-center mt-2'>
 					<button

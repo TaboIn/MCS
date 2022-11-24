@@ -56,14 +56,16 @@ export default function Shop() {
 
 	return (
 		<>
-			<AddItem
-				name={name}
-				desc={desc}
-				valid={valid}
-				onNameChange={handleNameChange}
-				onDescChange={handleDescChange}
-				onFormSubmit={handleFormSubmit}
-			/>
+			<div className='font-bold'>
+				<AddItem
+					name={name}
+					desc={desc}
+					valid={valid}
+					onNameChange={handleNameChange}
+					onDescChange={handleDescChange}
+					onFormSubmit={handleFormSubmit}
+				/>
+			</div>
 			<div>
 				{items.length === 0 && (
 					<p className='font-bold text-lg'>Добавьте первый товар</p>
