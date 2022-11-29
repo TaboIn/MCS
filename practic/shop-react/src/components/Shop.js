@@ -20,7 +20,7 @@ export default function Shop() {
 				setLoader(false)
 			}
 		})()
-	})
+	}, [])
 
 	return (
 		<div className='shop'>

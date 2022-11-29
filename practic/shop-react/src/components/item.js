@@ -18,20 +18,25 @@ export default function Item(props) {
 	return (
 		<div className='item'>
 			<img src={info.image} alt='' />
-			<div className='item-info'>
-				<h2>{info.name}</h2>
-				<p>{info.desc}</p>
+			<div className='item-info py-4 '>
+				<h2 className='text-lg font-bold py-4 bg-slate-100 flex justify-center'>
+					{info.name}
+				</h2>
+				<p className='text-lg py-2 flex justify-center'>{info.desc}</p>
 			</div>
-			<div className='item-quantity'>
+			<div className='item-quantity flex justify-center'>
 				<button
-					className='item-less'
+					className='bg-blue-500 hover:bg-blue-600 w-10 h-10 font-bold text-lg text-white'
 					disabled={total === 0}
 					onClick={handleRemoveClick}
 				>
 					-
 				</button>
-				<h3 className='item-total'>{total ? total : ''}</h3>
-				<button className='item-more' onClick={handleAddClick}>
+				<h3 className='font-bold  p-2'>{total ? total : ''}</h3>
+				<button
+					className='bg-blue-500 hover:bg-blue-600 w-10 h-10 font-bold text-lg text-white'
+					onClick={handleAddClick}
+				>
 					+
 				</button>
 			</div>
