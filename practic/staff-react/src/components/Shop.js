@@ -1,25 +1,27 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import ItemsList from './ItemsList'
 import AddItem from './AddItems'
 
 export default function Shop() {
-	const [items, setItems] = useState(() => {
-		const value = localStorage.getItem('items')
-		if (!value) {
-			return []
-		}
-		return JSON.parse(localStorage.getItem('items'))
-	})
+	const [items, setItems] = useState([])
 	const [name, setName] = useState('')
 	const [desc, setDesc] = useState('')
 	const [valid, setValid] = useState('')
 
-	useEffect(() => {
-		localStorage.setItem('items', JSON.stringify(items))
-	}, [items])
-
 	function handleFormSubmit(event) {
 		event.preventDefault()
+
+		fetch('https://covid-shop-mcs.herokuapp.com', {
+			method: 'POST',
+			headers: { 'Content-type': 'application/json' },
+			body: JSON.stringify({
+				name: name,
+				desc: desc,
+			}),
+		})
+			.then(response => response.json())
+			.then(data => console.log(data))
+			.catch(error => console.error(error))
 
 		if (!name) {
 			setValid('Введите название')
@@ -37,6 +39,7 @@ export default function Shop() {
 				desc: desc,
 			},
 		])
+
 		setName('')
 		setDesc('')
 		setValid('')
@@ -56,20 +59,16 @@ export default function Shop() {
 
 	return (
 		<>
+			<AddItem
+				name={name}
+				desc={desc}
+				valid={valid}
+				onNameChange={handleNameChange}
+				onDescChange={handleDescChange}
+				onFormSubmit={handleFormSubmit}
+			/>
 			<div className='font-bold'>
-				<AddItem
-					name={name}
-					desc={desc}
-					valid={valid}
-					onNameChange={handleNameChange}
-					onDescChange={handleDescChange}
-					onFormSubmit={handleFormSubmit}
-				/>
-			</div>
-			<div>
-				{items.length === 0 && (
-					<p className='font-bold text-lg'>Добавьте первый товар</p>
-				)}
+				{items.length === 0 && <p>Добавьте первый товар</p>}
 			</div>
 			<ItemsList items={items} onDeleteClick={handleDeleteClick} />
 		</>
